@@ -1,0 +1,150 @@
+.why {
+    background: white;
+}
+
+.why__container {
+    @include tablets {
+        width: 99%;
+    }
+
+    @include phones {
+        width: 95%;
+    }
+}
+
+.why__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(62px);
+    text-align: center;
+
+    @include tablets {
+        margin-bottom: rem(55px);
+    }
+}
+
+.why__header-title {
+    margin-bottom: rem(18px);
+    
+    @include tablets {
+        margin-bottom: rem(11px);
+    }
+}
+
+.why__header-text {
+    font-size: rem(16px);
+    color: #666;
+    width: 56%;
+    text-align: center;
+
+    @include tablets {
+        width: 71%;
+    }
+
+    @include phones {
+        width: 88%;
+    }
+}
+
+.why__list {
+    display: flex;
+    align-items: flex-start;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+
+.why__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3%;
+    flex: 1;
+    text-align: center;
+    position: relative;
+
+    @include tablets {
+        padding: 0 0.4%;
+    }
+    
+    @include phones {
+        flex-direction: unset;
+        padding: 0;
+        margin-bottom: rem(35px);
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+        &::before {
+            display: none;
+        }
+    }
+    &::before {
+        content: '';
+        width: rem(67px);
+        height: rem(21px);
+        position: absolute;
+        right: rem(-33px);
+        top: rem(60px);
+        background: url(../images/why-decor.png) center / contain no-repeat;
+
+        @include tablets {
+            display: none;
+        }
+    }
+}
+
+.why__item-circle {
+    background: #F2F5F4;
+    width: rem(128px);
+    height: rem(128px);
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    padding: rem(34px);
+    margin-bottom: rem(24px);
+
+    @include phones {
+        margin-right: rem(12px);
+        margin-bottom: 0;
+    }
+}
+.why__item-icon {
+    width: rem(68px);   
+    height: rem(68px);
+}
+
+.why__item-content {
+    @include phones {
+        text-align: left;
+    }
+}
+
+.why__item-header {
+    font-weight: 700;
+    font-size: rem(24px);
+    line-height: rem(28px);
+    margin-bottom: rem(7px);
+
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
+    @include phones {
+        margin-bottom: rem(6px);
+    }
+
+}
+
+
+.why__item-text {
+    font-size: rem(16px);
+    line-height: rem(19px);
+    color: #666;
+}

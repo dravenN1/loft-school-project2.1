@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: $baseFontsize;
+
+    @include tablets {
+    }
+
+    @include phones {
+        font-size: 3.75vmin;
+    }
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: $fontPlay;
+    color: $colorBlack;
+    text-decoration: none;
+}
+.wrapper {
+    overflow: hidden;
+}
+
+.section {
+    height: 100vh;
+    min-height: rem(600px);
+    display: flex;
+    align-items: center;
+
+    @include phones {
+        min-height: initial;
+    }
+}
+
+.container {
+    width: 95%;
+    max-width: $containerWidth;
+    margin: 0 auto;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    font-style: normal;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(48px);
+    line-height: rem(52px);
+    text-align: center;
+
+    @include phones {
+        font-size: rem(32px);
+        line-height: rem(36px);
+    }
+}

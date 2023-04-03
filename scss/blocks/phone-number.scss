@@ -1,0 +1,16 @@
+.phone-number {
+    font-weight: 400;
+    font-size: rem(18px);
+    color: #292929;
+    white-space: nowrap;
+
+    @include phones {
+        line-height: rem(21px);
+        font-size: rem(16px);
+    }
+}
+
+.phone-number__icon {
+    width: rem(12px);
+    height: rem(12px);
+}

@@ -1,0 +1,102 @@
+.preview {
+    background: $colorGrey;
+    align-items: stretch;
+    padding-top: rem(24px);
+    padding-bottom: rem(65px);
+
+    @include tablets {
+        padding-top: rem(40px);
+    }
+
+    @include phones {
+        padding-top: rem(24px);
+    }
+}
+.preview__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::before {
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: rem(17px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: rem(489px);
+        height: rem(489px);
+        background: url(../images/preview.png) center / contain no-repeat;
+    }
+}
+
+.preview__content {
+    @include tablets {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+        &::before {
+            @include tablets {
+                content: "";
+                width: rem(323px);
+                height: rem(323px);
+                background: url(../images/preview768.png) center / contain no-repeat;
+                margin-bottom: rem(64px);
+            }
+        }
+}
+.preview__title {
+    font-family: $fontPlay;
+    font-weight: 700;
+    font-size: rem(48px);
+    line-height: rem(52px);
+    text-transform: uppercase;
+    margin-bottom: rem(22px);
+    max-width: rem(400px);
+    
+    @include tablets {
+        padding: 0 6%;
+        max-width: 100%;
+        margin-bottom: rem(5px);
+    }
+
+    @include phones {
+        font-size: rem(32px);
+        line-height: rem(36px);
+        padding: 0 13%;
+        max-width: 100%;
+        margin-bottom: rem(14px);
+    }
+}
+.preview__description {
+    font-weight: 400;
+    font-size: rem(21px);
+    line-height: rem(25px);
+    margin-bottom: rem(36px);
+    font-family: $fontAlegreya;
+    max-width: rem(332px);
+
+    @include tablets {
+        padding: 0 26%;
+        max-width: 100%;
+        margin-bottom: rem(23px);
+    }
+
+    @include phones {
+        padding: 0 14%;
+        max-width: 100%;
+        font-size: rem(18px);
+        line-height: rem(20px);
+        margin-bottom: rem(26px);
+    }
+}

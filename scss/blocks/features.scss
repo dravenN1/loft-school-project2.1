@@ -1,0 +1,29 @@
+.features {
+    @include tablets {
+        display: none;
+    }
+}
+
+.features__list {
+    display: flex;
+}
+.features__item {
+    display: flex;
+    margin-right: rem(9px);
+}
+.features__icon-box {
+    width: rem(41px);
+    height: rem(41px);
+    margin-right: rem(11px);
+}
+
+.features__icon {
+    height: rem(41px);
+    width: rem(41px);
+}
+
+.features__text {
+    max-width: rem(114px);
+    font-size: rem(16px);
+    line-height: rem(18px);  
+}

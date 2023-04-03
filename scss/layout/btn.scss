@@ -1,0 +1,24 @@
+.btn {
+    display: inline-block;
+    padding: rem(22px) rem(36px);
+    background: $colorRed;
+    border-radius: rem(100px);
+    font-size: rem(16px);
+    line-height: 1;
+    border: rem(1px) solid transparent;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+
+    &--theme--transparent {
+        background: transparent;
+        text-transform: none;
+    }
+
+    &:hover {
+        background:rgba(255, 0, 0, 0.336) ;
+        transition: .5s;
+    }
+}
